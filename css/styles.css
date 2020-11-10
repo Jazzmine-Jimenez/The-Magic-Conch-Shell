@@ -3,15 +3,28 @@ Sub-Header Font: font-family: 'Ribeye', cursive;
 Body Font: font-family: 'Montserrat', sans-serif; */
 
 header {
-  font-family: 'Ribeye Marrow', cursive;
-  background-color: rgb(166, 171, 240);
+  font-family: 'Ribeye', cursive;
+  background-color: rgb(55, 204, 214);
   width: 100%;
+  text-align: center;
+  padding: 5px 0;
 }
 
 .get-started-button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: rgb(55, 204, 214);
+  border-radius: 15px;
+  padding: 25px 60px;
+  box-shadow: 5px 5px 8px rgba(58, 160, 173);
+  border: 1px solid black;
+  margin: 1rem auto;
 }
 
 .column-full {
   text-align: center;
+}
+
+.bored-sponge-img {
+  margin: 6rem auto;
 }

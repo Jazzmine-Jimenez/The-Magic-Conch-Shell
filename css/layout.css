@@ -8,7 +8,8 @@
   display: flex;
 }
 
-.column-full {
+.column-full,
+.bored-sponge-img {
   width: 100%;
 }
 
