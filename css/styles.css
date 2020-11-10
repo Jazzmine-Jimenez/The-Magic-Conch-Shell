@@ -1,0 +1,31 @@
+header {
+  font-family: 'Ribeye', cursive;
+  background-color: rgb(55, 204, 214);
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: 'Zilla Slab', serif;
+}
+
+.get-started-button {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  background-color: rgb(55, 204, 214);
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
+  border: 1px solid black;
+  margin: 1rem auto;
+}
+
+.column-full {
+  text-align: center;
+}
+
+.bored-sponge-img {
+  margin: 2rem auto;
+}
