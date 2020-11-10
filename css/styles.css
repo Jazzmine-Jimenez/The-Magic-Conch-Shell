@@ -1,0 +1,17 @@
+/* Header Font: font-family: 'Ribeye Marrow', cursive;
+Sub-Header Font: font-family: 'Ribeye', cursive;
+Body Font: font-family: 'Montserrat', sans-serif; */
+
+header {
+  font-family: 'Ribeye Marrow', cursive;
+  background-color: rgb(166, 171, 240);
+  width: 100%;
+}
+
+.get-started-button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.column-full {
+  text-align: center;
+}
