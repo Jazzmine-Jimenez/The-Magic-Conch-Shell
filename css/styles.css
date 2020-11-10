@@ -1,10 +1,18 @@
-header {
+.hidden {
+  display: none;
+}
+
+.home-page-header,
+.main-page-header {
   font-family: 'Ribeye', cursive;
   background-color: rgb(55, 204, 214);
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.home-page-header {
   text-align: center;
   padding: 5px 0;
-  margin-bottom: 1rem;
 }
 
 body {
@@ -22,10 +30,35 @@ body {
   margin: 1rem auto;
 }
 
-.column-full {
-  text-align: center;
-}
-
 .bored-sponge-img {
   margin: 2rem auto;
+}
+
+.main-page-header {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-icon,
+.search-icon {
+  font-size: 2rem;
+  padding: 0 4px;
+}
+
+.categories-button,
+.level-button {
+  width: 200px;
+  font-family: 'Zilla Slab', serif;
+  font-size: 20px;
+  background-color: rgb(55, 204, 214);
+  border-radius: 15px;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
+  border: 1px solid black;
+  margin: 5px auto;
+}
+
+.search {
+  text-align: left;
 }
