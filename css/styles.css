@@ -1,22 +1,23 @@
-/* Header Font: font-family: 'Ribeye Marrow', cursive;
-Sub-Header Font: font-family: 'Ribeye', cursive;
-Body Font: font-family: 'Montserrat', sans-serif; */
-
 header {
   font-family: 'Ribeye', cursive;
   background-color: rgb(55, 204, 214);
   width: 100%;
   text-align: center;
   padding: 5px 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: 'Zilla Slab', serif;
 }
 
 .get-started-button {
-  font-family: sans-serif;
-  font-size: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
   background-color: rgb(55, 204, 214);
   border-radius: 15px;
-  padding: 25px 60px;
-  box-shadow: 5px 5px 8px rgba(58, 160, 173);
+  padding: 15px 15px;
+  box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
   border: 1px solid black;
   margin: 1rem auto;
 }
@@ -26,5 +27,5 @@ header {
 }
 
 .bored-sponge-img {
-  margin: 6rem auto;
+  margin: 2rem auto;
 }
