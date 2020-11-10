@@ -11,6 +11,7 @@
 .column-full,
 .bored-sponge-img {
   width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
