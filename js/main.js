@@ -22,27 +22,26 @@ $conchButton.addEventListener('click', function (event) {
   $activityPage.className = 'activity-page';
   $activityList.innerHTML = '';
   getBoredData('');
-  // getBoredData('');
-  // getBoredData('');
 });
 
 document.addEventListener('click', function (event) {
-  if (event.target === $searchIcon[1] || event.target === $searchButton) {
+  for (var i = 0; i < $searchIcon.length; i++) {
+    if (event.target === $searchIcon[i]) {
+      $homePage.className = 'home-page hidden';
+      $mainPage.className = 'main-page';
+      $activityPage.className = 'activity-page hidden';
+    }
+    if (event.target === $homeIcon[i]) {
+      $homePage.className = 'home-page';
+      $mainPage.className = 'main-page hidden';
+      $activityPage.className = 'activity-page hidden';
+    }
+  }
+  if (event.target === $searchButton) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page';
     $activityPage.className = 'activity-page hidden';
   }
-  if (event.target === $homeIcon[0]) {
-    $homePage.className = 'home-page';
-    $mainPage.className = 'main-page hidden';
-    $activityPage.className = 'activity-page hidden';
-  }
-  if (event.target === $homeIcon[1]) {
-    $homePage.className = 'home-page';
-    $mainPage.className = 'main-page hidden';
-    $activityPage.className = 'activity-page hidden';
-  }
-
 });
 
 function getBoredData(name) {
@@ -83,9 +82,6 @@ function renderingActivities(model) {
   participants.textContent = 'Participants needed: ';
   participants.appendChild(numOfParticipants(model.participants));
   category.appendChild(participants);
-
-  // var hrElement = document.createElement('hr');
-  // divElement.appendChild(hrElement);
 
   $activityList.appendChild(divElement);
 

@@ -3,8 +3,7 @@
 }
 
 .home-page-header,
-.main-page-header,
-.activity-page-header {
+.navbar {
   font-family: 'Ribeye', cursive;
   background-color: rgb(55, 204, 214);
   width: 100%;
@@ -36,8 +35,7 @@ body {
   text-align: center;
 }
 
-.main-page-header,
-.activity-page-header {
+.navbar {
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
@@ -47,6 +45,7 @@ body {
 .search-icon {
   font-size: 2rem;
   padding: 0 4px;
+  margin: 1rem 0;
 }
 
 .categories-button,
@@ -85,4 +84,8 @@ body {
 
 .activity-row {
   padding: 0 1rem;
+}
+
+.conch-button{
+  margin: 3rem 0;
 }
