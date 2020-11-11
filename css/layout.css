@@ -9,7 +9,7 @@
 }
 
 .column-full,
-.bored-sponge-img {
+.sponge-img {
   width: 100%;
   text-align: center;
 }
@@ -17,6 +17,10 @@
 @media screen and (min-width: 768px) {
   .container {
     max-width: 900px;
+  }
+
+  .sponge-img{
+    max-width: 500px;
   }
 
   .column-full,

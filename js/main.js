@@ -7,25 +7,27 @@ var $conchButton = document.querySelector('.conch-button');
 var $activityList = document.querySelector('.activity-row');
 var $homeIcon = document.querySelectorAll('.go-home');
 var $searchIcon = document.querySelectorAll('.go-search');
+var $searchButton = document.querySelector('.search-button');
 
 $startButton.addEventListener('click', function (event) {
   $homePage.className = 'home-page hidden';
   $mainPage.className = 'main-page';
   $activityPage.className = 'activity-page hidden';
-
+  gsap.from($conchButton, { duration: 10, y: 40, x: 5, ease: 'bounce' });
 });
 
 $conchButton.addEventListener('click', function (event) {
   $homePage.className = 'home-page hidden';
   $mainPage.className = 'main-page hidden';
   $activityPage.className = 'activity-page';
+  $activityList.innerHTML = '';
   getBoredData('');
-  getBoredData('');
-  getBoredData('');
+  // getBoredData('');
+  // getBoredData('');
 });
 
 document.addEventListener('click', function (event) {
-  if (event.target === $searchIcon[1]) {
+  if (event.target === $searchIcon[1] || event.target === $searchButton) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page';
     $activityPage.className = 'activity-page hidden';
@@ -57,7 +59,8 @@ function renderingActivities(model) {
   var divElement = document.createElement('div');
 
   // Title
-  var activityTitle = document.createElement('h3');
+  var activityTitle = document.createElement('h2');
+  activityTitle.className = 'activity-title';
   activityTitle.textContent = model.activity;
   divElement.appendChild(activityTitle);
 
@@ -81,12 +84,12 @@ function renderingActivities(model) {
   participants.appendChild(numOfParticipants(model.participants));
   category.appendChild(participants);
 
-  var hrElement = document.createElement('hr');
-  divElement.appendChild(hrElement);
+  // var hrElement = document.createElement('hr');
+  // divElement.appendChild(hrElement);
 
   $activityList.appendChild(divElement);
 
-  return divElement;
+  // return divElement;
 }
 
 function circleLevel(decimal) {
