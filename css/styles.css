@@ -31,8 +31,9 @@ body {
   margin: 1rem auto;
 }
 
-.bored-sponge-img {
+.sponge-img {
   margin: 2rem auto;
+  text-align: center;
 }
 
 .main-page-header,
@@ -49,7 +50,8 @@ body {
 }
 
 .categories-button,
-.level-button {
+.level-button,
+.search-button {
   width: 200px;
   font-family: 'Zilla Slab', serif;
   font-size: 20px;
@@ -58,13 +60,29 @@ body {
   padding: 5px 10px;
   box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
   border: 1px solid black;
-  margin: 5px auto;
+  margin: 6px auto;
 }
 
 .search {
   text-align: left;
 }
 
+.activity-title{
+  font-size: 35px;
+  text-align: center;
+  font-weight: 500;
+}
+
 .activity-saying {
   font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  margin: 6px 0;
+}
+
+.activity-description {
+  font-size: 12px;
+}
+
+.activity-row {
+  padding: 0 1rem;
 }
