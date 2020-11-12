@@ -24,23 +24,19 @@ document.addEventListener('click', function (event) {
     $mainPage.className = 'main-page';
     $activityPage.className = 'activity-page hidden';
     $levelPage.className = 'level-page hidden';
-  }
-  if (event.target === $homeIcon) {
+  } else if (event.target === $homeIcon) {
     $homePage.className = 'home-page';
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page hidden';
     $levelPage.className = 'level-page hidden';
-  }
-  if (event.target === $conchButton[0]) {
+  } else if (event.target === $conchButton[0]) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page';
     $levelPage.className = 'level-page hidden';
     $activityList.innerHTML = '';
     getBoredData('');
-  }
-
-  if (event.target === $conchButton[1]) {
+  } else if (event.target === $conchButton[1]) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page';
@@ -49,9 +45,7 @@ document.addEventListener('click', function (event) {
     var $range = document.forms[0];
     var rangeInput = $range.elements.level.valueAsNumber;
     getBoredData('?accessibility=' + rangeInput);
-  }
-
-  if (event.target === $levelButton) {
+  } else if (event.target === $levelButton) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page hidden';
