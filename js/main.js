@@ -4,8 +4,8 @@ var $activityPage = document.querySelector('.activity-page');
 var $levelPage = document.querySelector('.level-page');
 var $startButton = document.querySelector('.get-started-button');
 var $conchButton = document.querySelectorAll('.conch-button');
-var $homeIcon = document.querySelectorAll('.go-home');
-var $searchIcon = document.querySelectorAll('.go-search');
+var $homeIcon = document.querySelector('.go-home');
+var $searchIcon = document.querySelector('.go-search');
 var $searchButton = document.querySelectorAll('.search-button');
 var $levelButton = document.querySelector('.level-button');
 var $activityList = document.querySelector('.activity-row');
@@ -19,19 +19,17 @@ $startButton.addEventListener('click', function (event) {
 });
 
 document.addEventListener('click', function (event) {
-  for (var i = 0; i < $searchIcon.length; i++) {
-    if (event.target === $searchIcon[i]) {
-      $homePage.className = 'home-page hidden';
-      $mainPage.className = 'main-page';
-      $activityPage.className = 'activity-page hidden';
-      $levelPage.className = 'level-page hidden';
-    }
-    if (event.target === $homeIcon[i]) {
-      $homePage.className = 'home-page';
-      $mainPage.className = 'main-page hidden';
-      $activityPage.className = 'activity-page hidden';
-      $levelPage.className = 'level-page hidden';
-    }
+  if (event.target === $searchIcon) {
+    $homePage.className = 'home-page hidden';
+    $mainPage.className = 'main-page';
+    $activityPage.className = 'activity-page hidden';
+    $levelPage.className = 'level-page hidden';
+  }
+  if (event.target === $homeIcon) {
+    $homePage.className = 'home-page';
+    $mainPage.className = 'main-page hidden';
+    $activityPage.className = 'activity-page hidden';
+    $levelPage.className = 'level-page hidden';
   }
   if (event.target === $conchButton[0]) {
     $homePage.className = 'home-page hidden';
