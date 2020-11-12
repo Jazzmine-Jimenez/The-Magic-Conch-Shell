@@ -18,7 +18,7 @@
 </head>
 <body>
   <!------------- HOME PAGE ------------------->
-  <div class="home-page hidden">
+  <div class="home-page">
     <header class="home-page-header">
       <h1>The Magic Conch Shell</h1>
     </header>
@@ -84,7 +84,7 @@
         <img class="sponge-img" src="images/praise-conch.png" alt="SpongBob and Patrick praising the magic conch">
       </div>
       <div class="activity-row">
-        <!-- rendering fucntion -->
+
       </div>
       <div class="row">
         <button class="search-button">Back to Search</button>
@@ -92,7 +92,7 @@
     </div>
   </div>
   <!------------- LEVEL PAGE ------------------->
-  <div class="level-page">
+  <div class="level-page hidden">
     <div class="navbar">
       <i class="fas fa-home home-icon go-home"></i>
       <i class="fas fa-search search-icon go-search"></i>
@@ -101,16 +101,18 @@
       <div class="column-full">
         <h2>Level of Difficulty</h2>
         <p>Choose your level then click the magic conch</p>
-        <label for="level"> easy
-        <input type="range" name="level" id="level" min="0" max="1" step="0.1"> hard
-        </label>
+        <form action="GET">
+          <label for="level"> easy
+          <input type="range" name="level" id="level" min="0" max="1" step="0.1"> hard
+          </label>
+        </form>
       </div>
     </div>
     <div class="row">
       <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
     </div>
       <div class="row">
-        <button class="search-button">Back to Search</button>
+        <button class="search-button">Back to Search </button>
       </div>
   </div>
 

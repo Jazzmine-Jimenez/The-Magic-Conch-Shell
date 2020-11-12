@@ -1,46 +1,77 @@
-
-var $startButton = document.querySelector('.get-started-button');
 var $homePage = document.querySelector('.home-page');
 var $mainPage = document.querySelector('.main-page');
 var $activityPage = document.querySelector('.activity-page');
-var $conchButton = document.querySelector('.conch-button');
-var $activityList = document.querySelector('.activity-row');
+var $levelPage = document.querySelector('.level-page');
+var $startButton = document.querySelector('.get-started-button');
+var $conchButton = document.querySelectorAll('.conch-button');
 var $homeIcon = document.querySelectorAll('.go-home');
 var $searchIcon = document.querySelectorAll('.go-search');
-var $searchButton = document.querySelector('.search-button');
+var $searchButton = document.querySelectorAll('.search-button');
+var $levelButton = document.querySelector('.level-button');
+var $activityList = document.querySelector('.activity-row');
 
 $startButton.addEventListener('click', function (event) {
   $homePage.className = 'home-page hidden';
   $mainPage.className = 'main-page';
   $activityPage.className = 'activity-page hidden';
+  $levelPage.className = 'level-page hidden';
   gsap.from($conchButton, { duration: 10, y: 40, x: 5, ease: 'bounce' });
 });
 
-$conchButton.addEventListener('click', function (event) {
-  $homePage.className = 'home-page hidden';
-  $mainPage.className = 'main-page hidden';
-  $activityPage.className = 'activity-page';
-  $activityList.innerHTML = '';
-  getBoredData('');
+document.addEventListener('click', function (event) {
+  if (event.target === $conchButton[0]) {
+    $homePage.className = 'home-page hidden';
+    $mainPage.className = 'main-page hidden';
+    $activityPage.className = 'activity-page';
+    $levelPage.className = 'level-page hidden';
+    $activityList.innerHTML = '';
+    getBoredData('');
+  }
+
+  if (event.target === $conchButton[1]) {
+    $homePage.className = 'home-page hidden';
+    $mainPage.className = 'main-page hidden';
+    $activityPage.className = 'activity-page';
+    $levelPage.className = 'level-page hidden';
+    $activityList.innerHTML = '';
+    var $range = document.forms[0];
+    var rangeInput = $range.elements.level.valueAsNumber;
+    getBoredData(rangeInput);
+    // NEED TO ADD APPROPRIATE ARGUMENT !!!!!!!!!!!!!!!!
+  }
+
+  if (event.target === $levelButton) {
+    $homePage.className = 'home-page hidden';
+    $mainPage.className = 'main-page hidden';
+    $activityPage.className = 'activity-page hidden';
+    $levelPage.className = 'level-page';
+  }
+
+  for (var i = 0; i < $searchButton.length; i++) {
+    if (event.target === $searchButton[i]) {
+      $homePage.className = 'home-page hidden';
+      $mainPage.className = 'main-page';
+      $activityPage.className = 'activity-page hidden';
+      $levelPage.className = 'level-page hidden';
+    }
+  }
 });
 
+// ------Navbar Click Events-----------
 document.addEventListener('click', function (event) {
   for (var i = 0; i < $searchIcon.length; i++) {
     if (event.target === $searchIcon[i]) {
       $homePage.className = 'home-page hidden';
       $mainPage.className = 'main-page';
       $activityPage.className = 'activity-page hidden';
+      $levelPage.className = 'level-page hidden';
     }
     if (event.target === $homeIcon[i]) {
       $homePage.className = 'home-page';
       $mainPage.className = 'main-page hidden';
       $activityPage.className = 'activity-page hidden';
+      $levelPage.className = 'level-page hidden';
     }
-  }
-  if (event.target === $searchButton) {
-    $homePage.className = 'home-page hidden';
-    $mainPage.className = 'main-page';
-    $activityPage.className = 'activity-page hidden';
   }
 });
 
@@ -84,8 +115,6 @@ function renderingActivities(model) {
   category.appendChild(participants);
 
   $activityList.appendChild(divElement);
-
-  // return divElement;
 }
 
 function circleLevel(decimal) {
