@@ -6,14 +6,29 @@
 
 .row {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.column-full,
-.sponge-img {
+.column-full{
+  width: 100%;
+}
+
+.column-half, .sponge-img{
   width: 100%;
   text-align: center;
 }
+
+.column-two-third{
+  font-size: 7.9px;
+}
+
+.home-icon,
+.search-icon {
+  font-size: 23px;
+  padding: 0 11px;
+  margin: 1rem 0;
+}
+
 
 @media screen and (min-width: 768px) {
   .container {
@@ -27,5 +42,22 @@
   .column-full,
   .column-half {
     padding: 0 0.75rem;
+    align-items: center;
   }
+
+  .column-two-third{
+    font-size: 16px;
+  }
+
+  .home-icon,
+  .search-icon {
+    font-size: 30px;
+    padding: 0 20px;
+    margin: 1rem 0;
+  }
+
+  .column-half{
+  width: 50%;
+  align-self: center;
+}
 }

@@ -5,14 +5,9 @@
 .home-page-header,
 .navbar {
   font-family: 'Ribeye', cursive;
-  background-color: rgb(55, 204, 214);
+  background-color: rgb(200, 251, 255);
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.home-page-header {
-  text-align: center;
-  padding: 5px 0;
 }
 
 body {
@@ -28,6 +23,7 @@ body {
   box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
   border: 1px solid black;
   margin: 1rem auto;
+  text-align: center;
 }
 
 .sponge-img {
@@ -35,17 +31,15 @@ body {
   text-align: center;
 }
 
-.navbar {
-  padding: 2px 20px;
+.column-one-third{
   display: flex;
-  justify-content: space-between;
 }
 
-.home-icon,
-.search-icon {
-  font-size: 2rem;
-  padding: 0 4px;
-  margin: 1rem 0;
+.navbar {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .categories-button,
@@ -91,5 +85,5 @@ body {
 }
 
 .main-page-title{
-  font-size: 100rem;
+  font-size: 2rem;
 }

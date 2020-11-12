@@ -15,7 +15,7 @@ $startButton.addEventListener('click', function (event) {
   $mainPage.className = 'main-page';
   $activityPage.className = 'activity-page hidden';
   $levelPage.className = 'level-page hidden';
-  gsap.from($conchButton, { duration: 10, y: 40, x: 5, ease: 'bounce' });
+  gsap.from($conchButton, { duration: 10, y: 40, x: 5, ease: 'bounce', scale: 1.5 });
 });
 
 document.addEventListener('click', function (event) {
@@ -36,8 +36,7 @@ document.addEventListener('click', function (event) {
     $activityList.innerHTML = '';
     var $range = document.forms[0];
     var rangeInput = $range.elements.level.valueAsNumber;
-    getBoredData(rangeInput);
-    // NEED TO ADD APPROPRIATE ARGUMENT !!!!!!!!!!!!!!!!
+    getBoredData('?accessibility=' + rangeInput);
   }
 
   if (event.target === $levelButton) {
