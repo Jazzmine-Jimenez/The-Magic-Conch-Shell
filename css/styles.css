@@ -3,17 +3,11 @@
 }
 
 .home-page-header,
-.main-page-header,
-.activity-page-header {
+.navbar {
   font-family: 'Ribeye', cursive;
-  background-color: rgb(55, 204, 214);
+  background-color: rgb(200, 251, 255);
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.home-page-header {
-  text-align: center;
-  padding: 5px 0;
 }
 
 body {
@@ -22,13 +16,14 @@ body {
 
 .get-started-button {
   font-family: 'Dancing Script', cursive;
-  font-size: 20px;
+  font-size: 29px;
   background-color: rgb(55, 204, 214);
   border-radius: 15px;
   padding: 15px 20px;
   box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
   border: 1px solid black;
   margin: 1rem auto;
+  text-align: center;
 }
 
 .sponge-img {
@@ -36,25 +31,23 @@ body {
   text-align: center;
 }
 
-.main-page-header,
-.activity-page-header {
-  padding: 20px 20px;
+.column-one-third {
   display: flex;
-  justify-content: space-between;
 }
 
-.home-icon,
-.search-icon {
-  font-size: 2rem;
-  padding: 0 4px;
+.navbar {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .categories-button,
 .level-button,
 .search-button {
-  width: 200px;
+  width: 330px;
   font-family: 'Zilla Slab', serif;
-  font-size: 20px;
+  font-size: 30px;
   background-color: rgb(55, 204, 214);
   border-radius: 15px;
   padding: 5px 10px;
@@ -67,7 +60,7 @@ body {
   text-align: left;
 }
 
-.activity-title{
+.activity-title {
   font-size: 35px;
   text-align: center;
   font-weight: 500;
@@ -83,6 +76,15 @@ body {
   font-size: 12px;
 }
 
-.activity-row {
+.activity-row,
+.level-intro {
   padding: 0 1rem;
+}
+
+.conch-button {
+  margin: 3rem 0;
+}
+
+.main-page-title {
+  font-size: 2rem;
 }
