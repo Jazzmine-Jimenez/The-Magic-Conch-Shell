@@ -45,6 +45,15 @@ document.addEventListener('click', function (event) {
     var $range = document.forms[0];
     var rangeInput = $range.elements.level.valueAsNumber;
     getBoredData('?accessibility=' + rangeInput);
+  } else if (event.target === $conchButton[2]) {
+    $homePage.className = 'home-page hidden';
+    $mainPage.className = 'main-page hidden';
+    $activityPage.className = 'activity-page';
+    $levelPage.className = 'level-page hidden';
+    $activityList.innerHTML = '';
+    var $category = document.forms[1];
+    var categoryInput = $category.elements.category.value;
+    getBoredData('?type=' + categoryInput);
   } else if (event.target === $levelButton) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page hidden';

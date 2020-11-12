@@ -89,7 +89,32 @@
       </div>
     </div>
   <!------------- CATEGORY PAGE ------------------->
-    <div class="category-page hidden">
+    <div class="category-page container hidden">
+      <div class="row">
+        <div class="column-full category-intro">
+          <h2>Categories</h2>
+          <p>Choose your category then click the magic conch</p>
+          <form action="GET">
+            <select name="category" id="category">
+              <option value="education">Educational</option>
+              <option value="recreational">Recreational</option>
+              <option value="social">Social</option>
+              <option value="diy">DIY</option>
+              <option value="charity">Charity</option>
+              <option value="cooking">Cooking</option>
+              <option value="relaxation">Relaxation</option>
+              <option value="music">Music</option>
+              <option value="busywork">Busywork</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
+      </div>
+      <div class="row">
+        <button class="search-button">Back to Search </button>
+      </div>
     </div>
   </div>
   <script src="js/data.js"></script>
