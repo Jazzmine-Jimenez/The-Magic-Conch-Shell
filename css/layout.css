@@ -7,18 +7,20 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.column-full{
+.column-full {
   width: 100%;
 }
 
-.column-half, .sponge-img{
+.column-half,
+.sponge-img {
   width: 100%;
   text-align: center;
 }
 
-.column-two-third{
+.column-two-third {
   font-size: 7.9px;
 }
 
@@ -29,13 +31,12 @@
   margin: 1rem 0;
 }
 
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 900px;
   }
 
-  .sponge-img{
+  .sponge-img {
     max-width: 500px;
   }
 
@@ -45,7 +46,7 @@
     align-items: center;
   }
 
-  .column-two-third{
+  .column-two-third {
     font-size: 16px;
   }
 
@@ -56,8 +57,8 @@
     margin: 1rem 0;
   }
 
-  .column-half{
-  width: 50%;
-  align-self: center;
-}
+  .column-half {
+    width: 50%;
+    align-self: center;
+  }
 }

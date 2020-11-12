@@ -31,12 +31,12 @@ body {
   text-align: center;
 }
 
-.column-one-third{
+.column-one-third {
   display: flex;
 }
 
 .navbar {
-  padding: 0px 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +60,7 @@ body {
   text-align: left;
 }
 
-.activity-title{
+.activity-title {
   font-size: 35px;
   text-align: center;
   font-weight: 500;
@@ -76,14 +76,15 @@ body {
   font-size: 12px;
 }
 
-.activity-row {
+.activity-row,
+.level-intro {
   padding: 0 1rem;
 }
 
-.conch-button{
+.conch-button {
   margin: 3rem 0;
 }
 
-.main-page-title{
+.main-page-title {
   font-size: 2rem;
 }
