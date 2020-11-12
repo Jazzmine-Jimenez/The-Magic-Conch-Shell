@@ -19,6 +19,20 @@ $startButton.addEventListener('click', function (event) {
 });
 
 document.addEventListener('click', function (event) {
+  for (var i = 0; i < $searchIcon.length; i++) {
+    if (event.target === $searchIcon[i]) {
+      $homePage.className = 'home-page hidden';
+      $mainPage.className = 'main-page';
+      $activityPage.className = 'activity-page hidden';
+      $levelPage.className = 'level-page hidden';
+    }
+    if (event.target === $homeIcon[i]) {
+      $homePage.className = 'home-page';
+      $mainPage.className = 'main-page hidden';
+      $activityPage.className = 'activity-page hidden';
+      $levelPage.className = 'level-page hidden';
+    }
+  }
   if (event.target === $conchButton[0]) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page hidden';
@@ -46,28 +60,10 @@ document.addEventListener('click', function (event) {
     $levelPage.className = 'level-page';
   }
 
-  for (var i = 0; i < $searchButton.length; i++) {
-    if (event.target === $searchButton[i]) {
+  for (var n = 0; n < $searchButton.length; n++) {
+    if (event.target === $searchButton[n]) {
       $homePage.className = 'home-page hidden';
       $mainPage.className = 'main-page';
-      $activityPage.className = 'activity-page hidden';
-      $levelPage.className = 'level-page hidden';
-    }
-  }
-});
-
-// ------Navbar Click Events-----------
-document.addEventListener('click', function (event) {
-  for (var i = 0; i < $searchIcon.length; i++) {
-    if (event.target === $searchIcon[i]) {
-      $homePage.className = 'home-page hidden';
-      $mainPage.className = 'main-page';
-      $activityPage.className = 'activity-page hidden';
-      $levelPage.className = 'level-page hidden';
-    }
-    if (event.target === $homeIcon[i]) {
-      $homePage.className = 'home-page';
-      $mainPage.className = 'main-page hidden';
       $activityPage.className = 'activity-page hidden';
       $levelPage.className = 'level-page hidden';
     }
