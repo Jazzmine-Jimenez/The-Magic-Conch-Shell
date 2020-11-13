@@ -38,13 +38,14 @@ body {
   display: flex;
 }
 
-.button {
+.start-button {
   text-align: center;
 }
 
 .categories-button,
 .level-button,
-.search-button {
+.search-button,
+.participants-button {
   width: 330px;
   font-family: 'Zilla Slab', serif;
   font-size: 30px;
@@ -99,11 +100,11 @@ button:hover {
   font-size: 2rem;
 }
 
-.center-buttons {
+.center-buttons, .button {
   flex-direction: column;
 }
 
-.category-dropdown {
+.dropdown {
   padding: 9px 27px;
   border-color: grey;
   font-family: 'Zilla Slab', serif;

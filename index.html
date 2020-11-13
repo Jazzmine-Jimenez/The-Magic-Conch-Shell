@@ -30,14 +30,20 @@
       <!------------- HOME PAGE ------------------->
       <div class="home-page">
         <div class="row">
-          <div class="column-half">
+          <div class="column-full">
+            <h2>Welcome, are you bored as shell?</h2>
+            <p>Are currently looking like SpongeBob down below, if so, you have came
+              to the right place!
+            </p>
             <img class="sponge-img" src="images/bored-sponge.gif" alt="Bored SpongeBob">
           </div>
-          <div class="column-half">
-            <div class="button">
+        <div class="row">
+          <div class="column-full">
+            <div class="start-button">
               <button class="get-started-button">Ask the Magic Conch Shell</button>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <!------------- MAIN (SEARCH) PAGE ------------------->
@@ -51,7 +57,8 @@
             <h2 class="search">Or search by:</h2>
             <div class="center-buttons">
               <button class="categories-button">Categories</button>
-              <button class="level-button">Level of Difficulty</button>
+              <button class="level-button">Level of difficulty</button>
+              <button class="participants-button">Participants needed</button>
             </div>
           </div>
         </div>
@@ -96,7 +103,7 @@
             <h1 class="title">Categories</h1>
             <p>Choose your category then click the magic conch</p>
             <form action="GET">
-              <select class="category-dropdown" name="category" id="category">
+              <select class="dropdown" name="category" id="category">
                 <option value="" selected disabled>--Choose a option--</option>
                 <option value="education">Educational</option>
                 <option value="recreational">Recreational</option>
@@ -107,6 +114,29 @@
                 <option value="relaxation">Relaxation</option>
                 <option value="music">Music</option>
                 <option value="busywork">Busywork</option>
+              </select>
+            </form>
+          </div>
+          <div class="column-half center-buttons">
+            <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
+            <button class="search-button">Back to Search </button>
+          </div>
+        </div>
+      </div>
+      <!------------- PARTICIPANTS PAGE ------------------->
+      <div class="participants-page hidden">
+        <div class="row">
+          <div class="column-half">
+            <h1 class="title">Participants</h1>
+            <p>Choose the number of participants then click the magic conch</p>
+            <form action="GET">
+              <select class="dropdown" name="participants" id="participants">
+                <option value="" selected disabled>--Choose number of participants--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
             </form>
           </div>
