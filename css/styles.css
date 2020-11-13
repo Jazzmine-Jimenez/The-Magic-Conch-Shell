@@ -38,19 +38,31 @@ body {
   display: flex;
 }
 
-.button {
+.start-button {
   text-align: center;
 }
 
 .categories-button,
 .level-button,
-.search-button {
+.participants-button {
   width: 330px;
   font-family: 'Zilla Slab', serif;
   font-size: 30px;
   background-color: rgb(55, 204, 214);
   border-radius: 15px;
   padding: 5px 10px;
+  box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
+  border: 1px solid black;
+  margin: 6px auto;
+}
+
+.search-button {
+  width: 280px;
+  font-family: 'Zilla Slab', serif;
+  font-size: 25px;
+  background-color: rgb(55, 204, 214);
+  border-radius: 15px;
+  padding: 0 10px;
   box-shadow: 5px 5px 8px rgba(71, 140, 150, 0.849);
   border: 1px solid black;
   margin: 6px auto;
@@ -99,11 +111,12 @@ button:hover {
   font-size: 2rem;
 }
 
-.center-buttons {
+.center-buttons,
+.button {
   flex-direction: column;
 }
 
-.category-dropdown {
+.dropdown {
   padding: 9px 27px;
   border-color: grey;
   font-family: 'Zilla Slab', serif;
