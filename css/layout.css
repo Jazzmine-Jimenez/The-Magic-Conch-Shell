@@ -10,18 +10,15 @@
   justify-content: center;
 }
 
-.column-full {
-  width: 100%;
-}
-
 .column-half,
+.column-full,
 .sponge-img {
   width: 100%;
-  text-align: center;
+  align-self: center;
 }
 
-.column-two-third {
-  font-size: 7.9px;
+.navbar-header {
+  font-size: 19px;
 }
 
 .home-icon,
@@ -41,13 +38,10 @@
   }
 
   .column-full,
-  .column-half {
-    padding: 0 0.75rem;
+  .column-half,
+  .sponge-img {
+    padding: 0 1rem;
     align-items: center;
-  }
-
-  .column-two-third {
-    font-size: 16px;
   }
 
   .home-icon,
@@ -60,5 +54,9 @@
   .column-half {
     width: 50%;
     align-self: center;
+  }
+
+  .navbar-header {
+    font-size: 25px;
   }
 }

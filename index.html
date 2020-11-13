@@ -14,24 +14,21 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
-  <!------------- HOME PAGE ------------------->
-  <div class="home-page">
-    <header class="home-page-header">
-      <div class="navbar">
-        <div class="column-two-third">
-          <h1>The Magic Conch Shell</h1>
-        </div>
-        <div class="column-one-third">
-          <i class="fas fa-home home-icon go-home"></i>
-          <i class="fas fa-search search-icon go-search"></i>
-        </div>
+  <div class="main-container">
+    <div class="navbar">
+      <div class="column-two-third">
+        <h1 class="navbar-header">The Magic Conch Shell</h1>
       </div>
-    </header>
-    <main>
-      <div class="container">
+      <div class="column-one-third">
+        <i class="fas fa-home home-icon go-home"></i>
+        <i class="fas fa-search search-icon go-search"></i>
+      </div>
+    </div>
+    <div class="container">
+      <!------------- HOME PAGE ------------------->
+      <div class="home-page">
         <div class="row">
           <div class="column-half">
             <img class="sponge-img" src="images/bored-sponge.gif" alt="Bored SpongeBob">
@@ -43,101 +40,84 @@
           </div>
         </div>
       </div>
-    </main>
-  </div>
-  <!------------- MAIN (SEARCH) PAGE ------------------->
-  <div class="main-page hidden">
-    <div class="navbar">
-      <div class="column-two-third">
-        <h1>The Magic Conch Shell</h1>
-      </div>
-      <div class="column-one-third">
-        <i class="fas fa-home home-icon go-home"></i>
-        <i class="fas fa-search search-icon go-search"></i>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="column-half">
-          <h1 class="main-page-title">Click the Magic Conch</h1>
-          <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
-        </div>
-        <div class="column-half">
-          <h2 class="search">Or search by:</h2>
-          <button class="categories-button">Categories</button>
-          <button class="level-button">Level of Difficulty</button>
+      <!------------- MAIN (SEARCH) PAGE ------------------->
+      <div class="main-page hidden">
+        <div class="row">
+          <div class="column-half">
+            <h1 class="title">Click the Magic Conch</h1>
+            <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
+          </div>
+          <div class="column-half">
+            <h2 class="search">Or search by:</h2>
+            <div class="center-buttons">
+              <button class="categories-button">Categories</button>
+              <button class="level-button">Level of Difficulty</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!------------- ACTIVITY PAGE ------------------->
-  <div class="activity-page hidden">
-    <div class="navbar">
-      <div class="column-two-third">
-        <h1>The Magic Conch Shell</h1>
-      </div>
-      <div class="column-one-third">
-        <i class="fas fa-home home-icon go-home"></i>
-        <i class="fas fa-search search-icon go-search"></i>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="column-full">
-          <h1 class="activity-saying">The Shell has Spoken:</h1>
+      <!------------- ACTIVITY PAGE ------------------->
+      <div class="activity-page hidden">
+        <div class="row">
+          <div class="column-full">
+            <h1 class="activity-page-saying">The Shell has Spoken:</h1>
+          </div>
+        </div>
+        <div class="row">
+          <img class="sponge-img" src="images/praise-conch.png" alt="SpongBob and Patrick praising the magic conch">
+        </div>
+        <div class="activity-row"> </div>
+        <div class="row">
+          <button class="search-button">Back to Search</button>
         </div>
       </div>
-      <div class="row">
-        <img class="sponge-img" src="images/praise-conch.png" alt="SpongBob and Patrick praising the magic conch">
+      <!------------- LEVEL PAGE ------------------->
+      <div class="level-page hidden">
+        <div class="row">
+          <div class="column-half level-intro">
+            <h1 class="title">Level of Difficulty</h1>
+            <p>Choose your level then click the magic conch</p>
+            <form action="GET">
+              <label for="level"> easy
+                <input class="level" type="range" name="level" id="level" min="0" max="1" step="0.1"> hard
+              </label>
+            </form>
+          </div>
+          <div class="column-half center-buttons">
+            <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
+            <button class="search-button">Back to Search </button>
+          </div>
+        </div>
       </div>
-      <div class="activity-row">
-      </div>
-      <div class="row">
-        <button class="search-button">Back to Search</button>
+      <!------------- CATEGORY PAGE ------------------->
+      <div class="category-page hidden">
+        <div class="row">
+          <div class="column-half category-intro">
+            <h1 class="title">Categories</h1>
+            <p>Choose your category then click the magic conch</p>
+            <form action="GET">
+              <select class="category-dropdown" name="category" id="category">
+                <option value="" selected disabled>--Choose a option--</option>
+                <option value="education">Educational</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">DIY</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+              </select>
+            </form>
+          </div>
+          <div class="column-half center-buttons">
+            <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
+            <button class="search-button">Back to Search </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!------------- LEVEL PAGE ------------------->
-  <div class="level-page hidden">
-    <div class="navbar">
-      <div class="column-two-third">
-        <h1>The Magic Conch Shell</h1>
-      </div>
-      <div class="column-one-third">
-        <i class="fas fa-home home-icon go-home"></i>
-        <i class="fas fa-search search-icon go-search"></i>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column-full level-intro">
-        <h2>Level of Difficulty</h2>
-        <p>Choose your level then click the magic conch</p>
-        <form action="GET">
-          <label for="level"> easy
-          <input type="range" name="level" id="level" min="0" max="1" step="0.1"> hard
-          </label>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <img class="conch-button" src="images/conch-button.png" alt="Magic conch">
-    </div>
-    <div class="row">
-      <button class="search-button">Back to Search </button>
-    </div>
-  </div>
 
-  <!------------- CATEGORY PAGE ------------------->
-  <div class="category-page hidden">
-    <div class="navbar">
-      <div class="column-two-third">
-        <h1>The Magic Conch Shell</h1>
-      </div>
-      <div class="column-one-third">
-        <i class="fas fa-home home-icon go-home"></i>
-        <i class="fas fa-search search-icon go-search"></i>
-      </div>
-    </div>
   </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
