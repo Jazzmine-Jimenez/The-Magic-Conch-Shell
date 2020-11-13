@@ -42,6 +42,14 @@ body {
   align-items: center;
 }
 
+.navbar-header{
+  font-size: 19px;
+}
+
+.button{
+  text-align: center;
+}
+
 .categories-button,
 .level-button,
 .search-button {
@@ -82,9 +90,25 @@ body {
 }
 
 .conch-button {
-  margin: 3rem 0;
+  margin: 1rem 0;
 }
 
-.main-page-title {
+.title {
   font-size: 2rem;
+}
+
+.center-buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.category-dropdown{
+  padding: 9px 27px;
+  border-color: grey;
+  font-family: 'Zilla Slab', serif;
+  font-size: 18px;
+}
+
+.level{
+  font-size: 100px;
 }

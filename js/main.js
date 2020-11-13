@@ -2,12 +2,14 @@ var $homePage = document.querySelector('.home-page');
 var $mainPage = document.querySelector('.main-page');
 var $activityPage = document.querySelector('.activity-page');
 var $levelPage = document.querySelector('.level-page');
+var $categoryPage = document.querySelector('.category-page');
 var $startButton = document.querySelector('.get-started-button');
 var $conchButton = document.querySelectorAll('.conch-button');
 var $homeIcon = document.querySelector('.go-home');
 var $searchIcon = document.querySelector('.go-search');
 var $searchButton = document.querySelectorAll('.search-button');
 var $levelButton = document.querySelector('.level-button');
+var $categoryButton = document.querySelector('.categories-button');
 var $activityList = document.querySelector('.activity-row');
 
 $startButton.addEventListener('click', function (event) {
@@ -15,7 +17,7 @@ $startButton.addEventListener('click', function (event) {
   $mainPage.className = 'main-page';
   $activityPage.className = 'activity-page hidden';
   $levelPage.className = 'level-page hidden';
-  gsap.from($conchButton, { duration: 10, y: 40, x: 5, ease: 'bounce', scale: 1.5 });
+  gsap.from($conchButton, { duration: 10, y: 30, x: 5, ease: 'bounce', scale: 1.3 });
 });
 
 document.addEventListener('click', function (event) {
@@ -24,16 +26,19 @@ document.addEventListener('click', function (event) {
     $mainPage.className = 'main-page';
     $activityPage.className = 'activity-page hidden';
     $levelPage.className = 'level-page hidden';
+    $categoryPage.className = 'category-page hidden';
   } else if (event.target === $homeIcon) {
     $homePage.className = 'home-page';
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page hidden';
     $levelPage.className = 'level-page hidden';
+    $categoryPage.className = 'category-page hidden';
   } else if (event.target === $conchButton[0]) {
     $homePage.className = 'home-page hidden';
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page';
     $levelPage.className = 'level-page hidden';
+    $categoryPage.className = 'category-page hidden';
     $activityList.innerHTML = '';
     getBoredData('');
   } else if (event.target === $conchButton[1]) {
@@ -41,6 +46,7 @@ document.addEventListener('click', function (event) {
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page';
     $levelPage.className = 'level-page hidden';
+    $categoryPage.className = 'category-page hidden';
     $activityList.innerHTML = '';
     var $range = document.forms[0];
     var rangeInput = $range.elements.level.valueAsNumber;
@@ -50,6 +56,7 @@ document.addEventListener('click', function (event) {
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page';
     $levelPage.className = 'level-page hidden';
+    $categoryPage.className = 'category-page hidden';
     $activityList.innerHTML = '';
     var $category = document.forms[1];
     var categoryInput = $category.elements.category.value;
@@ -59,6 +66,13 @@ document.addEventListener('click', function (event) {
     $mainPage.className = 'main-page hidden';
     $activityPage.className = 'activity-page hidden';
     $levelPage.className = 'level-page';
+    $categoryPage.className = 'category-page hidden';
+  } else if (event.target === $categoryButton) {
+    $homePage.className = 'home-page hidden';
+    $mainPage.className = 'main-page hidden';
+    $activityPage.className = 'activity-page hidden';
+    $levelPage.className = 'level-page hidden';
+    $categoryPage.className = 'category-page';
   }
 
   for (var n = 0; n < $searchButton.length; n++) {
@@ -67,6 +81,7 @@ document.addEventListener('click', function (event) {
       $mainPage.className = 'main-page';
       $activityPage.className = 'activity-page hidden';
       $levelPage.className = 'level-page hidden';
+      $categoryPage.className = 'category-page hidden';
     }
   }
 });
