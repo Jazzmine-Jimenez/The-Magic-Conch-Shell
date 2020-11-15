@@ -20,7 +20,7 @@ $startButton.addEventListener('click', function (event) {
   $activityPage.className = 'activity-page hidden';
   $levelPage.className = 'level-page hidden';
   $participantsPage.className = 'participants-page hidden';
-  gsap.from($conchButton, { duration: 10, y: 30, x: 5, ease: 'bounce', scale: 1.3 });
+  gsap.from($conchButton, { duration: 10, y: 10, x: 5, ease: 'bounce', scale: 1.1 });
 });
 
 document.addEventListener('click', function (event) {
