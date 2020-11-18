@@ -75,6 +75,7 @@ button {
 button:hover {
   box-shadow: 5px 10px 10px rgba(45, 114, 124, 0.849);
   background-color: rgb(94, 228, 238);
+  cursor: pointer;
 }
 
 .search {
@@ -106,6 +107,7 @@ button:hover {
   margin-top: 1rem;
   margin-bottom: 3rem;
   max-width: 280px;
+  cursor: pointer;
 }
 
 .title {
@@ -131,6 +133,7 @@ button:hover {
 .go-home:hover,
 .go-search:hover {
   color: rgb(100, 100, 100);
+  cursor: pointer;
 }
 
 .loader {
