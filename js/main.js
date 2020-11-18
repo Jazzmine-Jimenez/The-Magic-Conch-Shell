@@ -122,6 +122,17 @@ function getBoredData(name) {
   xhr.addEventListener('load', function () {
     renderingActivities(xhr.response);
   });
+
+  xhr.addEventListener('error', function () {
+    var $error = document.querySelector('.error');
+    $error.textContent = 'Error: There was a problem handling your request';
+  });
+
+  xhr.addEventListener('unload', function () {
+    var $loading = document.querySelector('.loading.hidden');
+    $loading.className = 'loading';
+  });
+
   xhr.send();
 }
 
