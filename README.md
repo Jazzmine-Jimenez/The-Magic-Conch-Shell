@@ -1,6 +1,6 @@
 # Magic Conch Shell (AJAX Project)
 
-A full stack JavaScript application for anyone who is bored and is in need of a suggested activity
+A full stack JavaScript application for anyone who is bored and in need of a suggested activity
 
 ## Technologies Used
 
