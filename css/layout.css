@@ -33,6 +33,12 @@
     max-width: 900px;
   }
 
+  .categories-button,
+  .level-button,
+  .participants-button {
+  width: 330px;
+  }
+
   .column-full,
   .column-half,
   .sponge-img {
