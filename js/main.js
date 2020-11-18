@@ -117,7 +117,7 @@ document.addEventListener('click', function (event) {
 
 function getBoredData(name) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://www.boredapi.com/api/activity/' + name);
+  xhr.open('GET', 'https://www.boredapi.com/api/activity/' + name);
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
     renderingActivities(xhr.response);
