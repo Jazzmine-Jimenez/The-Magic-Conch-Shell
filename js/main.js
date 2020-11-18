@@ -127,7 +127,6 @@ function getBoredData(name) {
 
 function renderingActivities(model) {
   var divElement = document.createElement('div');
-
   // Title
   var activityTitle = document.createElement('h2');
   activityTitle.className = 'activity-title';
