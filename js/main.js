@@ -119,18 +119,18 @@ function getBoredData(name) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'http://www.boredapi.com/api/activity/' + name);
   xhr.responseType = 'json';
+
+  var $loading = document.querySelector('.loader.hidden');
+  $loading.className = 'loader';
+
   xhr.addEventListener('load', function () {
+    $loading.className = 'loader hidden';
     renderingActivities(xhr.response);
   });
 
   xhr.addEventListener('error', function () {
     var $error = document.querySelector('.error');
-    $error.textContent = 'Error: There was a problem handling your request';
-  });
-
-  xhr.addEventListener('unload', function () {
-    var $loading = document.querySelector('.loading.hidden');
-    $loading.className = 'loading';
+    $error.textContent = 'Uh-Oh looks like something went wrong, the magic conch is not speaking';
   });
 
   xhr.send();
