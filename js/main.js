@@ -20,7 +20,7 @@ $startButton.addEventListener('click', function (event) {
   $activityPage.className = 'activity-page hidden';
   $levelPage.className = 'level-page hidden';
   $participantsPage.className = 'participants-page hidden';
-  gsap.from($conchButton, { duration: 10, y: 30, x: 5, ease: 'bounce', scale: 1.3 });
+  gsap.from($conchButton, { duration: 10, y: 10, x: 5, ease: 'bounce', scale: 1.1 });
 });
 
 document.addEventListener('click', function (event) {
@@ -119,9 +119,20 @@ function getBoredData(name) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://www.boredapi.com/api/activity/' + name);
   xhr.responseType = 'json';
+
+  var $loading = document.querySelector('.loader.hidden');
+  $loading.className = 'loader';
+
   xhr.addEventListener('load', function () {
+    $loading.className = 'loader hidden';
     renderingActivities(xhr.response);
   });
+
+  xhr.addEventListener('error', function () {
+    var $error = document.querySelector('.error');
+    $error.textContent = 'Uh-Oh looks like something went wrong, the magic conch is not speaking';
+  });
+
   xhr.send();
 }
 
