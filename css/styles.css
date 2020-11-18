@@ -129,9 +129,10 @@ button:hover {
 }
 
 .go-home:hover,
-.go-search:hover{
-color: rgb(100, 100, 100);
+.go-search:hover {
+  color: rgb(100, 100, 100);
 }
+
 .loader {
   border: 16px solid #f3f3f3;
   border-top: 16px solid rgb(55, 204, 214);
@@ -144,4 +145,10 @@ color: rgb(100, 100, 100);
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.handling-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
