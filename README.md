@@ -1,4 +1,4 @@
-# Magic Conch Shell (AJAX Project)
+# Magic Conch Shell 
 
 A full stack JavaScript application for anyone who is bored and in need of a suggested activity
 
