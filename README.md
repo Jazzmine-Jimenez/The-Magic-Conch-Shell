@@ -11,7 +11,7 @@ A full stack JavaScript application for anyone who is bored and in need of a sug
 
 ## Live Demo
 
-Try the application live at [https://jazzmine-jimenez.github.io/ajax-project/](https://jazzmine-jimenez.github.io/ajax-project/)
+Try the application live at [https://jazzmine-jimenez.github.io/The-Magic-Conch-Shell/](https://jazzmine-jimenez.github.io/The-Magic-Conch-Shell/)
 
 ## Preview
 ![Live site preview](images/magic-conch-shell.gif)
